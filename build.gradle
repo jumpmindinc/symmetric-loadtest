@@ -24,6 +24,11 @@ dependencies {
     implementation "net.sf.grinder:grinder:3.11"
     implementation "ring:ring-core:1.1.0"
     implementation "ring:ring-servlet:1.1.0"
+    constraints {
+        implementation("commons-fileupload:commons-fileupload:1.6.0") {
+            because "CVE-2016-1000031, CVE-2016-3092, CVE-2014-0050, CVE-2013-2186, CVE-2013-0248, CVE-2023-24998, CVE-2025-48976"
+        }
+    }
 }
 
 distributions {
